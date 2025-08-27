@@ -302,7 +302,8 @@ It automates the process by allowing you to do everything right from the R conso
 ![](R.png)
 
 ```
-# In R Studio/R:
+
+# Then in R Studio/R:
 # Run below installation code only once:
 install.packages("stringi")
 install.packages("curl")
@@ -312,23 +313,27 @@ install.packages("httr")
 install.packages("swirl", dependencies = TRUE)
 library(swirl)
 
-# [Optionally] 
-# Un-comment below line to uninstall all legacy courses,
-# if you want a cleaner list of courses.
+# [Optionally]
+# Un-comment below line to delete your progress.
+# Update to your own name, e.g., delete_progress("sam")
+# delete_progress("User Name Here")
+
+# [Optionally]
+# Uninstall all legacy courses.
 # uninstall_all_courses(force = FALSE)
 
-# [Optionally] 
-# Un-comment below line to delete your progress.
-# delete_progress("User Name Here")
-# delete_progress("sam")
+# Uninstall below courses.
+uninstall_course("R_Programming")
+uninstall_course("R_Programming_E")
+uninstall_course("Statistical_Inference")
 
 # Re-install updated courses
 # Fix for compatibility issue in "R_Programming: 8. Logic".
-install_course_github("telescopeuser-ntu", "R_Programming_2025_08_27")
-install_course_github("telescopeuser-ntu", "Statistical_Inference_2025_08_27")
+install_course_github("telescopeuser-ntu", "R_Programming")
+install_course_github("telescopeuser-ntu", "Statistical_Inference")
 
-# Now, please run below two lines of code when you want to start or re-start swirl self-learning:
-# install.packages("swirl", dependencies = TRUE) is not required to run each time.
+# Now, please run below code when you want to start or re-start from 2nd time onwards:
+# install.packages("swirl", dependencies = TRUE) is not required.
 # Just run library(swirl), followed by swirl() each time to load swirl library/functions into your computer for use.
 library(swirl)
 swirl()
