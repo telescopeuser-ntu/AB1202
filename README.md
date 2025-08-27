@@ -301,63 +301,38 @@ It automates the process by allowing you to do everything right from the R conso
 
 ![](R.png)
 
-1) Make sure you have a recent version version of swirl:
-
 ```
-install.packages("swirl")
-```
+# In R Studio/R:
+# Run below installation code only once:
+install.packages("stringi")
+install.packages("curl")
+install.packages("curl")
+install.packages("RCurl")
+install.packages("httr")
+install.packages("swirl", dependencies = TRUE)
+library(swirl)
 
-2) Enter the following from the R console to install:
+# [Optionally] 
+# Un-comment below line to uninstall all legacy courses,
+# if you want a cleaner list of courses.
+# uninstall_all_courses(force = FALSE)
 
-```
-library("swirl")
+# [Optionally] 
+# Un-comment below line to delete your progress.
+# delete_progress("User Name Here")
+# delete_progress("sam")
 
-# Fundamental
-install_course("R Programming E") # or: install_course("R Programming")
-install_course("Exploratory Data Analysis")
+# Re-install updated courses
+# Fix for compatibility issue in "R_Programming: 8. Logic".
+install_course_github("telescopeuser-ntu", "R_Programming_2025_08_27")
+install_course_github("telescopeuser-ntu", "Statistical_Inference_2025_08_27")
 
-# Intermediate
-install_course("Regression Models")
-install_course("The R Programming Environment") # Optional
-
-# Advanced
-install_course("Statistical Inference")
-install_course("Getting and Cleaning Data")
-install_course("Advanced R Programming") # Optional
-
+# Now, please run below two lines of code when you want to start or re-start swirl self-learning:
+# install.packages("swirl", dependencies = TRUE) is not required to run each time.
+# Just run library(swirl), followed by swirl() each time to load swirl library/functions into your computer for use.
+library(swirl)
 swirl()
-```
 
-For example, `install_course("R Programming")` will install the R Programming course. **Please note that course names are case sensitive!**
-
-
-## Install and run additional workshop/course manually
-
-If the automatic course installation method outlined above does not work for you, then there's a simple alternative.
-
-1) Click [**here**](https://github.com/telescopeuser/S-SB-Workshop/archive/master.zip "S-SB-Workshop-master.zip") to download the file `S-SB-Workshop-master.zip`.
-
-2) Install all all available courses:
-
-```
-library("swirl")
-install_course_zip("~/Downloads/S-SB-Workshop-master.zip", multi=TRUE)
-swirl()
-```
-
----
-
-Or, to install one course at a time, enter the following from the R console, **substituting the correct file path** to your downloaded file and the **name of your desired course**:
-
-```
-install_course_zip("path/to/file/here/S-SB-Workshop-master.zip", multi=TRUE, 
-                   which_course="Course Name Here")
-```
-
-For example, if you download the zip file to `~/Downloads/S-SB-Workshop-master.zip`, then the following command will install the R Programming course.
-
-```
-install_course_zip("~/Downloads/S-SB-Workshop-master.zip", multi=TRUE, which_course="R Programming")
 ```
 
 **Please note that course names are case sensitive!**
@@ -380,14 +355,3 @@ If you are not sure about a particular use case, don't hesitate to send us an em
 
 ---
 
-**R vs Python for Data Science | Which Should You Learn? by [Shankar](https://www.analyticsvidhya.com/blog/author/shankar_dk/)**
-
-https://www.analyticsvidhya.com/blog/2021/05/r-or-python-reasons-behind-this-cloud-war/
-
----
-
-**Data Science Road Map, by [Swami Chandrasekaran](https://nirvacana.com/thoughts/swamichandra/)**
-
-http://nirvacana.com/thoughts/wp-content/uploads/2018/01/RoadToDataScientist1.png
-
-<img align="left" src='ds road map.png' width=100%>
